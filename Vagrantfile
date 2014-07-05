@@ -11,9 +11,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.customize ["modifyvm", :id, "--natdnsproxy1", "off"]
   end
 
-  config.vm.define :nginx do |nginx|
-    nginx.vm.host_name = "nginx"
-    nginx.vm.network :private_network, ip: "192.168.56.10"
+  config.vm.define :web1 do |web1|
+    web1.vm.host_name = "web1"
+    web1.vm.network :private_network, ip: "192.168.56.10"
   end
 
   config.vm.define :redis1 do |redis1|

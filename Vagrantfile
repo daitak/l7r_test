@@ -20,4 +20,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     redis1.vm.host_name = "redis1"
     redis1.vm.network :private_network, ip: "192.168.56.11"
   end
+
+  config.vm.define :redis2 do |redis2|
+    redis2.vm.host_name = "redis2"
+    redis2.vm.network :private_network, ip: "192.168.56.12"
+  end
 end
